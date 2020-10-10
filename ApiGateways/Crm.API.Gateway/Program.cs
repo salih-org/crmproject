@@ -18,10 +18,14 @@ namespace Crm.API.Gateway
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseUrls("http://*:1000");
-                    webBuilder.UseStartup<Startup>();
-                });
+            .ConfigureAppConfiguration((host, config) =>
+            {
+                config.AddJsonFile("Configufations/ocelot.json");
+            })
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseUrls("http://*:1000");
+                webBuilder.UseStartup<Startup>();
+            });
     }
 }
