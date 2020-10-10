@@ -12,15 +12,18 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.API.Services.Contact", "Services\ContactService\Crm.API.Services.Contact\Crm.API.Services.Contact.csproj", "{6A810AB0-5953-403C-9064-55C9E9421687}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContactService", "ContactService", "{2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}"
-	ProjectSection(SolutionItems) = preProject
-		Services\ContactService\docker-compose.yml = Services\ContactService\docker-compose.yml
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReservationService", "ReservationService", "{FC16A6E7-9D59-4495-A29F-4369C4D54419}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.API.Service.Contact.Data", "Services\ContactService\Crm.API.Service.Contact.Data\Crm.API.Service.Contact.Data.csproj", "{4F8F48EB-63A4-47E2-BD70-C01BC5389413}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.API.Service.Contact.Services", "Services\ContactService\Crm.API.Service.Contact.Service\Crm.API.Service.Contact.Services\Crm.API.Service.Contact.Services.csproj", "{BB2709C9-5B80-4B3D-8899-342BD2C0E793}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3EFB8DD7-EB6B-4AD0-AB2E-E0E51792D07D}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

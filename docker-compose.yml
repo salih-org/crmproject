@@ -1,11 +1,11 @@
-version: '3:1'
+version: '3.1'
 
 services:
   s_crm_api_gateway:
     image: salihcantekin/crmapigateway:latest
     build:
       context: .
-      dockerfile: ApiGateways/Crm.API.Gateway
+      dockerfile: ApiGateways/Crm.API.Gateway/Dockerfile
 
   s_contact_service_db:
     image: salihcantekin/postgresql        
@@ -16,4 +16,4 @@ services:
       - s_contact_service_db
     build:
       context: .
-      dockerfile: Services/ContactService/Crm.API.Services.Contact
+      dockerfile: Services/ContactService/Crm.API.Services.Contact/Dockerfile

@@ -4,13 +4,10 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 #EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
-WORKDIR /src
 COPY *.csproj ./
 RUN dotnet restore Crm.API.Gateway.csproj
 
 
-FROM build AS publish
 RUN dotnet publish "Crm.API.Gateway.csproj" -c Release -o /app/publish
 
 FROM base AS final

@@ -1,4 +1,4 @@
-version: '3:1'
+version: '3.1'
 
 services:
   s_crm_api_gateway:
@@ -55,4 +55,5 @@ services:
         - node.role == worker
   
   
-  
+networks:
+  net_crm:
