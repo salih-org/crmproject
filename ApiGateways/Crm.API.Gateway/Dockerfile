@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS  build-env
 WORKDIR /app
 #EXPOSE 443
 
-COPY *.csproj ./
+COPY Crm.API.Gateway.csproj ./
 RUN dotnet restore
 
 COPY . ./
