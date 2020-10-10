@@ -39,20 +39,7 @@ services:
         
         
   s_contact_service_api:
-    ports:
-      - 90:1000
-    depends_on:
-      - s_contact_service_db
-    networks:
-      - net_crm
-    deploy:
-     replicas: 1
-     restart_policy:
-       max_attempts: 3
-       condition: on-failure
-     placement: 
-      constraints: 
-        - node.role == worker
+    
   
   
 networks:

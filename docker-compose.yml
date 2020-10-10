@@ -3,6 +3,18 @@ version: '3.1'
 services:
   s_crm_api_gateway:
     image: salihcantekin/crmapigateway:latest
+    ports:
+      - 90:1000
+    networks:
+      - net_crm
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
     build:
       context: .
       dockerfile: ApiGateways/Crm.API.Gateway/Dockerfile
@@ -30,6 +42,20 @@ services:
         
   s_contact_service_api:
     image: salihcantekin/contactapi
+    ports:
+      - 90:1000
+    depends_on:
+      - s_contact_service_db
+    networks:
+      - net_crm
+    deploy:
+     replicas: 1
+     restart_policy:
+       max_attempts: 3
+       condition: on-failure
+     placement: 
+      constraints: 
+        - node.role == worker
     depends_on:
       - s_contact_service_db
     build:
