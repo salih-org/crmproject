@@ -11,7 +11,7 @@ services:
     image: salihcantekin/postgresql        
         
   s_contact_service_api:
-    image: salihcantekin/crm/contactapi
+    image: salihcantekin/contactapi
     depends_on:
       - s_contact_service_db
     build:
