@@ -54,6 +54,8 @@ services:
      placement: 
       constraints: 
         - node.role == worker
+    environment:
+      - ASPNET_ENVIRONMENT=Production
     depends_on:
       - s_contact_service_db
     build:
