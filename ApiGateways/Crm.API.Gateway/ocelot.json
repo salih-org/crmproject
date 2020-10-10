@@ -1,21 +1,11 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost"
+    "BaseUrl": "http://localhost:44334"
   },
   "Routes": [
     {
-      "DownstreamPathTemplate": "/contact/{id}",
-      "UpstreamPathTemplate": "/api/contact/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "s_contact_service_api"
-        }
-      ]
-    },
-    {
-      "DownstreamPathTemplate": "/contact/",
-      "UpstreamPathTemplate": "/api/contact/",
+      "UpstreamPathTemplate": "/contact/{everything}",
+      "DownstreamPathTemplate": "/api/contact/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
