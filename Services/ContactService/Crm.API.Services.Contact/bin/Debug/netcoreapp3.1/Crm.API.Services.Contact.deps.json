@@ -24,7 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Crm.API.Services.Contact/1.0.0": {
         "dependencies": {
-          "Crm.API.Service.Contact.Data": "1.0.0",
+          "Crm.API.Service.Contact.Services": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -585,6 +585,17 @@
         },
         "compile": {
           "Crm.API.Service.Contact.Data.dll": {}
+        }
+      },
+      "Crm.API.Service.Contact.Services/1.0.0": {
+        "dependencies": {
+          "Crm.API.Service.Contact.Data": "1.0.0"
+        },
+        "runtime": {
+          "Crm.API.Service.Contact.Services.dll": {}
+        },
+        "compile": {
+          "Crm.API.Service.Contact.Services.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2317,6 +2328,11 @@
       "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
     },
     "Crm.API.Service.Contact.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Crm.API.Service.Contact.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

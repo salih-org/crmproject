@@ -2,9 +2,6 @@ C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\b
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Crm.API.Gateway.exe
-C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.AssemblyInfoInputs.cache
-C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.AssemblyInfo.cs
-C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.RazorTargetAssemblyInfo.cache
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\staticwebassets\Crm.API.Gateway.StaticWebAssets.Manifest.cache
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\staticwebassets\Crm.API.Gateway.StaticWebAssets.xml
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.csprojAssemblyReference.cache

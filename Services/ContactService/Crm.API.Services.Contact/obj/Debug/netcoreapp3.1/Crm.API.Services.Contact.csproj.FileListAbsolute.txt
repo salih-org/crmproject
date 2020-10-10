@@ -41,3 +41,5 @@ C:\Projects\Projects\DockerProjects\CrmProject\src\Services\ContactService\Crm.A
 C:\Projects\Projects\DockerProjects\CrmProject\src\Services\ContactService\Crm.API.Services.Contact\obj\Debug\netcoreapp3.1\Crm.API.Services.Contact.dll
 C:\Projects\Projects\DockerProjects\CrmProject\src\Services\ContactService\Crm.API.Services.Contact\obj\Debug\netcoreapp3.1\Crm.API.Services.Contact.pdb
 C:\Projects\Projects\DockerProjects\CrmProject\src\Services\ContactService\Crm.API.Services.Contact\obj\Debug\netcoreapp3.1\Crm.API.Services.Contact.genruntimeconfig.cache
+C:\Projects\Projects\DockerProjects\CrmProject\src\Services\ContactService\Crm.API.Services.Contact\bin\Debug\netcoreapp3.1\Crm.API.Service.Contact.Services.dll
+C:\Projects\Projects\DockerProjects\CrmProject\src\Services\ContactService\Crm.API.Services.Contact\bin\Debug\netcoreapp3.1\Crm.API.Service.Contact.Services.pdb

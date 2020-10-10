@@ -2,10 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Crm.API.Service.Contact.Data\Crm.API.Service.Contact.Data.csproj" />
   </ItemGroup>
+
+
 
 </Project>
