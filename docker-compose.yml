@@ -44,8 +44,6 @@ services:
     image: salihcantekin/contactapi
     ports:
       - 90:1000
-    depends_on:
-      - s_contact_service_db
     networks:
       - net_crm
     deploy:

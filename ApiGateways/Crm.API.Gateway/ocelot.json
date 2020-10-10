@@ -9,7 +9,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "s_contact_service_api"
+          "Host": "s_contact_service_api",
+          "Port": 1000
         }
       ]
     }
