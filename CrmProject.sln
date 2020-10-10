@@ -9,21 +9,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.API.Gateway", "ApiGateways\Crm.API.Gateway\Crm.API.Gateway.csproj", "{FD86D327-DD3E-48AA-870A-812E29BFCA00}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.API.Services.Contact", "Services\ContactService\Crm.API.Services.Contact\Crm.API.Services.Contact.csproj", "{6A810AB0-5953-403C-9064-55C9E9421687}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContactService", "ContactService", "{2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReservationService", "ReservationService", "{FC16A6E7-9D59-4495-A29F-4369C4D54419}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.API.Service.Contact.Data", "Services\ContactService\Crm.API.Service.Contact.Data\Crm.API.Service.Contact.Data.csproj", "{4F8F48EB-63A4-47E2-BD70-C01BC5389413}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.API.Service.Contact.Services", "Services\ContactService\Crm.API.Service.Contact.Service\Crm.API.Service.Contact.Services\Crm.API.Service.Contact.Services.csproj", "{BB2709C9-5B80-4B3D-8899-342BD2C0E793}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3EFB8DD7-EB6B-4AD0-AB2E-E0E51792D07D}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.override.yml = docker-compose.override.yml
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.API.Service.Contact.Service", "Services\ContactService\Crm.API.Service.Contact.Service\Crm.API.Service.Contact.Service.csproj", "{7A5202EE-C0BF-4EAC-A0F9-9D9CA54784DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.API.Service.Contact", "Services\ContactService\Crm.API.Service.Contact\Crm.API.Service.Contact.csproj", "{7E6341DF-E988-456C-8C83-924A8774FF5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,29 +35,29 @@ Global
 		{FD86D327-DD3E-48AA-870A-812E29BFCA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD86D327-DD3E-48AA-870A-812E29BFCA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD86D327-DD3E-48AA-870A-812E29BFCA00}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A810AB0-5953-403C-9064-55C9E9421687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A810AB0-5953-403C-9064-55C9E9421687}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A810AB0-5953-403C-9064-55C9E9421687}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A810AB0-5953-403C-9064-55C9E9421687}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F8F48EB-63A4-47E2-BD70-C01BC5389413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F8F48EB-63A4-47E2-BD70-C01BC5389413}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F8F48EB-63A4-47E2-BD70-C01BC5389413}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F8F48EB-63A4-47E2-BD70-C01BC5389413}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB2709C9-5B80-4B3D-8899-342BD2C0E793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB2709C9-5B80-4B3D-8899-342BD2C0E793}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB2709C9-5B80-4B3D-8899-342BD2C0E793}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB2709C9-5B80-4B3D-8899-342BD2C0E793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5202EE-C0BF-4EAC-A0F9-9D9CA54784DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5202EE-C0BF-4EAC-A0F9-9D9CA54784DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5202EE-C0BF-4EAC-A0F9-9D9CA54784DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5202EE-C0BF-4EAC-A0F9-9D9CA54784DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E6341DF-E988-456C-8C83-924A8774FF5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E6341DF-E988-456C-8C83-924A8774FF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E6341DF-E988-456C-8C83-924A8774FF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E6341DF-E988-456C-8C83-924A8774FF5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FD86D327-DD3E-48AA-870A-812E29BFCA00} = {B922FEB9-2380-490E-A8BF-BC316C111E18}
-		{6A810AB0-5953-403C-9064-55C9E9421687} = {2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}
 		{2E7DCC71-5C5B-4FCF-B52C-E353D3166B59} = {D5C771B2-2510-4C65-B746-CCA1F0937BA9}
 		{FC16A6E7-9D59-4495-A29F-4369C4D54419} = {D5C771B2-2510-4C65-B746-CCA1F0937BA9}
 		{4F8F48EB-63A4-47E2-BD70-C01BC5389413} = {2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}
-		{BB2709C9-5B80-4B3D-8899-342BD2C0E793} = {2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}
+		{7A5202EE-C0BF-4EAC-A0F9-9D9CA54784DF} = {2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}
+		{7E6341DF-E988-456C-8C83-924A8774FF5E} = {2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE84A902-B2B0-484A-A5C2-AD9D21B9C34D}

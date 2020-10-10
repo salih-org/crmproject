@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -8,9 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Crm.API.Service.Contact.Data\Crm.API.Service.Contact.Data.csproj" />
+    <ProjectReference Include="..\Crm.API.Service.Contact.Service\Crm.API.Service.Contact.Service.csproj" />
   </ItemGroup>
-
 
 
 </Project>
