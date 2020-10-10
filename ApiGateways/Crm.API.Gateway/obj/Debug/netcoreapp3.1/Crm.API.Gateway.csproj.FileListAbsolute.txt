@@ -2,12 +2,6 @@ C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\b
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Crm.API.Gateway.exe
-C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\staticwebassets\Crm.API.Gateway.StaticWebAssets.Manifest.cache
-C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\staticwebassets\Crm.API.Gateway.StaticWebAssets.xml
-C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.csprojAssemblyReference.cache
-C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.csproj.CoreCompileInputs.cache
-C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.MvcApplicationPartsAssemblyInfo.cs
-C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.MvcApplicationPartsAssemblyInfo.cache
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Crm.API.Gateway.deps.json
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Crm.API.Gateway.runtimeconfig.json
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Crm.API.Gateway.runtimeconfig.dev.json
@@ -22,7 +16,12 @@ C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\b
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\bin\Debug\netcoreapp3.1\Ocelot.dll
+C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.csproj.CoreCompileInputs.cache
+C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.MvcApplicationPartsAssemblyInfo.cs
+C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.MvcApplicationPartsAssemblyInfo.cache
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.csproj.CopyComplete
+C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\staticwebassets\Crm.API.Gateway.StaticWebAssets.Manifest.cache
+C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\staticwebassets\Crm.API.Gateway.StaticWebAssets.xml
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.dll
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.pdb
 C:\Projects\Projects\DockerProjects\CrmProject\src\ApiGateways\Crm.API.Gateway\obj\Debug\netcoreapp3.1\Crm.API.Gateway.genruntimeconfig.cache
