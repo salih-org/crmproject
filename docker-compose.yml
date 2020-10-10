@@ -35,3 +35,6 @@ services:
     build:
       context: .
       dockerfile: Services/ContactService/Crm.API.Service.Contact/Dockerfile
+
+networks:
+  net_crm:
