@@ -41,7 +41,7 @@ namespace Crm.API.Services.Contact
                 });
             });
 
-            services.AddSingleton<IContactService, ContactService>();
+            services.AddScoped<IContactService, ContactService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
