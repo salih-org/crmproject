@@ -4,18 +4,18 @@
   },
   "Routes": [
     {
-      "UpstreamPathTemplate": "/contact/{id}",
-      "DownstreamPathTemplate": "/api/contact/{id}",
+      "DownstreamPathTemplate": "/contact/{id}",
+      "UpstreamPathTemplate": "/api/contact/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "s_contact_service_api",
+          "Host": "s_contact_service_api"
         }
       ]
     },
     {
-      "UpstreamPathTemplate": "/contact/",
-      "DownstreamPathTemplate": "/api/contact/",
+      "DownstreamPathTemplate": "/contact/",
+      "UpstreamPathTemplate": "/api/contact/",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
