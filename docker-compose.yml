@@ -8,7 +8,7 @@ services:
       dockerfile: ApiGateways/Crm.API.Gateway/Dockerfile
 
   s_contact_service_db:
-    image: salihcantekin/postgresql        
+    image: salihcantekin/postgres
         
   s_contact_service_api:
     image: salihcantekin/contactapi
