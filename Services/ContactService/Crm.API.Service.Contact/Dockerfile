@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY Services/ContactService/Crm.API.Service.Contact.Data/*.csproj ./
 COPY Services/ContactService/Crm.API.Service.Contact.Service/*.csproj ./
-COPY Services/ContactService/Crm.API.Services.Contact/*.csproj ./
+COPY Services/ContactService/Crm.API.Service.Contact/*.csproj ./
 
 RUN dotnet restore
 
