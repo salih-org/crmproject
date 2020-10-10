@@ -9,6 +9,24 @@ services:
 
   s_contact_service_db:
     image: salihcantekin/postgres
+    ports:
+     - 2345:5432
+    networks:
+     - net_crm
+    environment:
+     - PGDATA=/var/lib/postgresql/data/pgdata
+     - POSTGRES_USER=postgres
+     - POSTGRES_PASSWORD=241990
+    volumes:
+     - /mnt/nfs_shares/docker_app_data/postgresql/contact_service:/var/lib/postgresql/data
+    deploy:
+     replicas: 1
+     restart_policy:
+       max_attempts: 3
+       condition: on-failure
+     placement: 
+      constraints: 
+        - node.role == worker
         
   s_contact_service_api:
     image: salihcantekin/contactapi
