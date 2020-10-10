@@ -1,0 +1,27 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:7000"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/contact/{id}",
+      "DownstreamPathTemplate": "/api/contact/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "s_contact_service_api",
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/contact/",
+      "DownstreamPathTemplate": "/api/contact/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "s_contact_service_api"
+        }
+      ]
+    }
+  ]
+}
