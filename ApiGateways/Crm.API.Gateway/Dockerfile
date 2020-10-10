@@ -5,9 +5,9 @@ WORKDIR /app
 #EXPOSE 443
 
 COPY *.csproj ./
-RUN dotnet restore Crm.API.Gateway.csproj
+RUN dotnet restore
 
-
+COPY . ./
 RUN dotnet publish "Crm.API.Gateway.csproj" -c Release -o /app/publish
 
 FROM base AS final

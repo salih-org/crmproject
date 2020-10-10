@@ -5,10 +5,10 @@ WORKDIR /app
 #EXPOSE 443
 
 COPY *.csproj ./
-RUN dotnet restore Crm.API.Service.Contact.csproj
+RUN dotnet restore
 
-
-RUN dotnet publish "Crm.API.Service.Contact.csproj" -c Release -o /app/publish
+COPY . ./
+RUN dotnet publish -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
