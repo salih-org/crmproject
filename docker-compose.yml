@@ -16,4 +16,4 @@ services:
       - s_contact_service_db
     build:
       context: .
-      dockerfile: Services/ContactService/Crm.API.Services.Contact/Dockerfile
+      dockerfile: Services/ContactService/Crm.API.Service.Contact/Dockerfile
