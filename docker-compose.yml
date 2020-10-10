@@ -4,7 +4,7 @@ services:
   s_crm_api_gateway:
     image: salihcantekin/crmapigateway:latest
     ports:
-      - 90:1000
+      - 80:1000
     networks:
       - net_crm
     deploy:
