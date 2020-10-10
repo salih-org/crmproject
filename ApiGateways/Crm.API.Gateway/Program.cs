@@ -20,7 +20,7 @@ namespace Crm.API.Gateway
             Host.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((host, config) =>
             {
-                config.AddJsonFile("Configurations/ocelot.json");
+                config.AddJsonFile("ocelot.json");
             })
             .ConfigureWebHostDefaults(webBuilder =>
             {
