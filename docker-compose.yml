@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   s_crm_api_gateway:
-    image: salihcantekin/crmapigateway:latest
+    image: localhost:5000/crmapigateway:latest
     ports:
       - 80:1000
     networks:
@@ -20,7 +20,7 @@ services:
       dockerfile: ApiGateways/Crm.API.Gateway/Dockerfile
 
   s_contact_service_db:
-    image: salihcantekin/postgres
+    image: localhost:5000/postgres
     ports:
      - 2345:5432
     networks:
@@ -41,7 +41,7 @@ services:
         - node.role == worker
         
   s_contact_service_api:
-    image: salihcantekin/contactapi
+    image: localhost:5000/contactapi
     ports:
       - 90:1000
     networks:
@@ -68,7 +68,7 @@ services:
 
 
   s_reservation_service_db:
-    image: salihcantekin/postgres
+    image: localhost:5000/postgres
     ports:
      - 2346:5432
     networks:
@@ -89,7 +89,7 @@ services:
         - node.role == worker
 
   s_reservation_service_api:
-    image: salihcantekin/reservationapi
+    image: localhost:5000/reservationapi
     ports:
       - 91:1000
     networks:
