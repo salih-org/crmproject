@@ -22,7 +22,7 @@ namespace Crm.API.Service.Reservation.Data.Context
         {
             modelBuilder.Entity<Reservations>(entity =>
             {
-                entity.ToTable("reservations", "contact");
+                entity.ToTable("reservations", "reservations");
 
                 entity.HasIndex(e => e.Id)
                     .HasName("reservations_id_uindex")
