@@ -19,6 +19,10 @@ services:
       context: .
       dockerfile: ApiGateways/Crm.API.Gateway/Dockerfile
 
+
+
+
+
   s_contact_service_db:
     image: salihcantekin/postgres
     ports:
@@ -58,9 +62,58 @@ services:
       - ASPNET_ENVIRONMENT=Production
     depends_on:
       - s_contact_service_db
+      - s_crm_api_gateway
     build:
       context: .
       dockerfile: Services/ContactService/Crm.API.Service.Contact/Dockerfile
+
+
+
+
+  s_reservation_service_db:
+    image: salihcantekin/postgres
+    ports:
+     - 2346:5432
+    networks:
+     - net_crm
+    environment:
+     - PGDATA=/var/lib/postgresql/data/pgdata
+     - POSTGRES_USER=postgres
+     - POSTGRES_PASSWORD=241990
+    volumes:
+     - /mnt/nfs_shares/docker_app_data/postgresql/reservation_service:/var/lib/postgresql/data
+    deploy:
+     replicas: 1
+     restart_policy:
+       max_attempts: 3
+       condition: on-failure
+     placement: 
+      constraints: 
+        - node.role == worker
+
+  s_reservation_service_api:
+    image: salihcantekin/contactapi
+    ports:
+      - 90:1000
+    networks:
+      - net_crm
+    deploy:
+     replicas: 1
+     restart_policy:
+       max_attempts: 3
+       condition: on-failure
+     placement: 
+      constraints: 
+        - node.role == worker
+    environment:
+      - ASPNET_ENVIRONMENT=Production
+    depends_on:
+      - s_reservation_service_db
+      - s_crm_api_gateway
+    build:
+      context: .
+      dockerfile: Services/ReservationService/Crm.API.Reservation.Contact/Dockerfile
+
 
 networks:
   net_crm:

@@ -10,8 +10,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.API.Gateway", "ApiGateways\Crm.API.Gateway\Crm.API.Gateway.csproj", "{FD86D327-DD3E-48AA-870A-812E29BFCA00}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContactService", "ContactService", "{2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}"
+	ProjectSection(SolutionItems) = preProject
+		Services\ContactService\Data_Readme.txt = Services\ContactService\Data_Readme.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReservationService", "ReservationService", "{FC16A6E7-9D59-4495-A29F-4369C4D54419}"
+	ProjectSection(SolutionItems) = preProject
+		Services\ReservationService\Data_Readme.txt = Services\ReservationService\Data_Readme.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.API.Service.Contact.Data", "Services\ContactService\Crm.API.Service.Contact.Data\Crm.API.Service.Contact.Data.csproj", "{4F8F48EB-63A4-47E2-BD70-C01BC5389413}"
 EndProject
@@ -23,6 +29,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.API.Service.Contact.Service", "Services\ContactService\Crm.API.Service.Contact.Service\Crm.API.Service.Contact.Service.csproj", "{7A5202EE-C0BF-4EAC-A0F9-9D9CA54784DF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.API.Service.Contact", "Services\ContactService\Crm.API.Service.Contact\Crm.API.Service.Contact.csproj", "{7E6341DF-E988-456C-8C83-924A8774FF5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.API.Service.Reservation", "Services\ReservationService\Crm.API.Service.Reservation\Crm.API.Service.Reservation.csproj", "{14F9F5B3-DFF1-4E34-AB22-922F62F0C3B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.API.Service.Reservation.Data", "Services\ReservationService\Crm.API.Service.Reservation.Data\Crm.API.Service.Reservation.Data.csproj", "{084EE485-AFD0-4C67-8B98-D8D65E0F6CAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.API.Service.Reservation.Service", "Services\ReservationService\Crm.API.Service.Reservation.Service\Crm.API.Service.Reservation.Service.csproj", "{6DE021B1-91C4-497B-B71E-E989D57CC29F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +58,18 @@ Global
 		{7E6341DF-E988-456C-8C83-924A8774FF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E6341DF-E988-456C-8C83-924A8774FF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E6341DF-E988-456C-8C83-924A8774FF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F9F5B3-DFF1-4E34-AB22-922F62F0C3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F9F5B3-DFF1-4E34-AB22-922F62F0C3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F9F5B3-DFF1-4E34-AB22-922F62F0C3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F9F5B3-DFF1-4E34-AB22-922F62F0C3B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{084EE485-AFD0-4C67-8B98-D8D65E0F6CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{084EE485-AFD0-4C67-8B98-D8D65E0F6CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{084EE485-AFD0-4C67-8B98-D8D65E0F6CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{084EE485-AFD0-4C67-8B98-D8D65E0F6CAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE021B1-91C4-497B-B71E-E989D57CC29F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE021B1-91C4-497B-B71E-E989D57CC29F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE021B1-91C4-497B-B71E-E989D57CC29F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE021B1-91C4-497B-B71E-E989D57CC29F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +81,9 @@ Global
 		{4F8F48EB-63A4-47E2-BD70-C01BC5389413} = {2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}
 		{7A5202EE-C0BF-4EAC-A0F9-9D9CA54784DF} = {2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}
 		{7E6341DF-E988-456C-8C83-924A8774FF5E} = {2E7DCC71-5C5B-4FCF-B52C-E353D3166B59}
+		{14F9F5B3-DFF1-4E34-AB22-922F62F0C3B2} = {FC16A6E7-9D59-4495-A29F-4369C4D54419}
+		{084EE485-AFD0-4C67-8B98-D8D65E0F6CAE} = {FC16A6E7-9D59-4495-A29F-4369C4D54419}
+		{6DE021B1-91C4-497B-B71E-E989D57CC29F} = {FC16A6E7-9D59-4495-A29F-4369C4D54419}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE84A902-B2B0-484A-A5C2-AD9D21B9C34D}

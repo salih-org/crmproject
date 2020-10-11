@@ -13,6 +13,17 @@
           "Port": 1000
         }
       ]
+    },
+    {
+      "UpstreamPathTemplate": "/res/{everything}",
+      "DownstreamPathTemplate": "/api/reservation/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "s_reservation_service_api",
+          "Port": 1001
+        }
+      ]
     }
   ]
 }
