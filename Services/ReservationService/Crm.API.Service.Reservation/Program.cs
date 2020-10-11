@@ -37,7 +37,7 @@ namespace Crm.API.Service.Reservation
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseConfiguration(Configuration);
-                    webBuilder.UseUrls("http://*:1001");
+                    webBuilder.UseUrls("http://*:1000");
                     webBuilder.UseStartup<Startup>();
                 });
     }

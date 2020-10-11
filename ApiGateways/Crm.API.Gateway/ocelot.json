@@ -21,7 +21,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "s_reservation_service_api",
-          "Port": 1001
+          "Port": 1000
         }
       ]
     }
