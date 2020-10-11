@@ -32,7 +32,7 @@ services:
     environment:
      - PGDATA=/var/lib/postgresql/data/pgdata
      - POSTGRES_USER=postgres
-     - POSTGRES_PASSWORD=241990
+     - POSTGRES_PASSWORD_FILE=/run/secrets/sec_contact_db_pass
     volumes:
      - /mnt/nfs_shares/docker_app_data/postgresql/contact_service:/var/lib/postgresql/data
     deploy:
@@ -79,7 +79,7 @@ services:
     environment:
      - PGDATA=/var/lib/postgresql/data/pgdata
      - POSTGRES_USER=postgres
-     - POSTGRES_PASSWORD=241990
+     - POSTGRES_PASSWORD_FILE=/run/secrets/sec_reservation_db_pass
     volumes:
      - /mnt/nfs_shares/docker_app_data/postgresql/reservation_service:/var/lib/postgresql/data
     deploy:
@@ -117,3 +117,9 @@ services:
 
 networks:
   net_crm:
+
+secrets:
+  sec_contact_db_pass:
+    file: /mnt/nfs_shares/docker_app_data/secret_files/contact_db_pasword.txt
+  sec_reservation_db_pass:
+    file: /mnt/nfs_shares/docker_app_data/secret_files/reservation_db_pasword.txt
