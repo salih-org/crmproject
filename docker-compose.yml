@@ -28,9 +28,7 @@ services:
     environment:
      - PGDATA=/var/lib/postgresql/data/pgdata
      - POSTGRES_USER=postgres
-     - POSTGRES_PASSWORD_FILE="/run/secrets/sec_contact_db_pass"
-    secrets:
-      - sec_contact_db_pass
+     - POSTGRES_PASSWORD=241990
     volumes:
      - /mnt/nfs_shares/docker_app_data/postgresql/contact_service:/var/lib/postgresql/data
     deploy:
@@ -56,8 +54,6 @@ services:
      placement: 
       constraints: 
         - node.role == worker
-    #secrets:
-    #  - sec_contact_db_conn_str
     environment:
       - ASPNET_ENVIRONMENT=Production
     #  - ConnectionStrings__Postgresql=/run/secrets/sec_contact_db_conn_str
@@ -80,9 +76,7 @@ services:
     environment:
      - PGDATA=/var/lib/postgresql/data/pgdata
      - POSTGRES_USER=postgres
-     - POSTGRES_PASSWORD_FILE="/run/secrets/sec_reservation_db_pass"
-    secrets:
-      - sec_reservation_db_pass
+     - POSTGRES_PASSWORD=241990
     volumes:
      - /mnt/nfs_shares/docker_app_data/postgresql/reservation_service:/var/lib/postgresql/data
     deploy:
@@ -108,8 +102,6 @@ services:
      placement: 
       constraints: 
         - node.role == worker
-    #secrets:
-    #  - sec_reservation_db_conn_str
     environment:
       - ASPNET_ENVIRONMENT=Production
     #  - ConnectionStrings__Postgresql=/run/secrets/sec_reservation_db_conn_str
@@ -124,11 +116,11 @@ services:
 networks:
   net_crm:
 
-secrets:
-  sec_contact_db_pass:
-    external: true
-  sec_reservation_db_pass:
-    external: true
+#secrets:
+  #sec_contact_db_pass:
+  #  external: true
+  #sec_reservation_db_pass:
+  #  external: true
   
   #sec_reservation_db_conn_str:
   #  external: true
