@@ -19,9 +19,14 @@ namespace Crm.API.Service.Reservation
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly ILogger<Startup> logger;
+
+        public Startup(IConfiguration configuration, ILogger<Startup> Logger)
         {
             Configuration = configuration;
+            logger = Logger;
+
+            logger.LogWarning("ConnStr: " + Configuration.GetConnectionString("Postgresql"));
         }
 
         public IConfiguration Configuration { get; }

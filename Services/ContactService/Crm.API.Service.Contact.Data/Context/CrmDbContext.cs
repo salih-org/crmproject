@@ -18,14 +18,6 @@ namespace Crm.API.Service.Contact.Data.Context
 
         public virtual DbSet<Models.Contact> Contact { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //if (!optionsBuilder.IsConfigured)
-            //{
-            //    optionsBuilder.UseNpgsql("Host=salihcloud.eastus.cloudapp.azure.com;Port=2345;Database=postgres;Username=postgres;Password=241990");
-            //}
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Models.Contact>(entity =>
