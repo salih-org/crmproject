@@ -53,7 +53,7 @@ namespace Crm.API.Service.Reservation
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
