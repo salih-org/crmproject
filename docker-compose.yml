@@ -58,6 +58,8 @@ services:
      placement: 
       constraints: 
         - node.role == worker
+    secrets:
+      - sec_contact_db_conn_str
     environment:
       - ASPNET_ENVIRONMENT=Production
       - ConnectionStrings__Postgresql=/run/secrets/sec_contact_db_conn_str
@@ -106,6 +108,8 @@ services:
      placement: 
       constraints: 
         - node.role == worker
+    secrets:
+      - sec_reservation_db_conn_str
     environment:
       - ASPNET_ENVIRONMENT=Production
       - ConnectionStrings__Postgresql=/run/secrets/sec_reservation_db_conn_str
