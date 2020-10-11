@@ -94,7 +94,7 @@ services:
   s_reservation_service_api:
     image: salihcantekin/contactapi
     ports:
-      - 90:1000
+      - 91:1000
     networks:
       - net_crm
     deploy:
