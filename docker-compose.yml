@@ -19,10 +19,6 @@ services:
       context: .
       dockerfile: ApiGateways/Crm.API.Gateway/Dockerfile
 
-
-
-
-
   s_contact_service_db:
     image: salihcantekin/postgres
     ports:
@@ -32,7 +28,9 @@ services:
     environment:
      - PGDATA=/var/lib/postgresql/data/pgdata
      - POSTGRES_USER=postgres
-     - POSTGRES_PASSWORD_FILE=/run/secrets/sec_contact_db_pass
+     - POSTGRES_PASSWORD_FILE="/run/secrets/sec_contact_db_pass"
+    secrets:
+      - sec_contact_db_pass
     volumes:
      - /mnt/nfs_shares/docker_app_data/postgresql/contact_service:/var/lib/postgresql/data
     deploy:
@@ -58,11 +56,11 @@ services:
      placement: 
       constraints: 
         - node.role == worker
-    secrets:
-      - sec_contact_db_conn_str
+    #secrets:
+    #  - sec_contact_db_conn_str
     environment:
       - ASPNET_ENVIRONMENT=Production
-      - ConnectionStrings__Postgresql=/run/secrets/sec_contact_db_conn_str
+    #  - ConnectionStrings__Postgresql=/run/secrets/sec_contact_db_conn_str
     depends_on:
       - s_contact_service_db
       - s_crm_api_gateway
@@ -82,7 +80,9 @@ services:
     environment:
      - PGDATA=/var/lib/postgresql/data/pgdata
      - POSTGRES_USER=postgres
-     - POSTGRES_PASSWORD_FILE=/run/secrets/sec_reservation_db_pass
+     - POSTGRES_PASSWORD_FILE="/run/secrets/sec_reservation_db_pass"
+    secrets:
+      - sec_reservation_db_pass
     volumes:
      - /mnt/nfs_shares/docker_app_data/postgresql/reservation_service:/var/lib/postgresql/data
     deploy:
@@ -108,11 +108,11 @@ services:
      placement: 
       constraints: 
         - node.role == worker
-    secrets:
-      - sec_reservation_db_conn_str
+    #secrets:
+    #  - sec_reservation_db_conn_str
     environment:
       - ASPNET_ENVIRONMENT=Production
-      - ConnectionStrings__Postgresql=/run/secrets/sec_reservation_db_conn_str
+    #  - ConnectionStrings__Postgresql=/run/secrets/sec_reservation_db_conn_str
     depends_on:
       - s_reservation_service_db
       - s_crm_api_gateway
@@ -130,7 +130,7 @@ secrets:
   sec_reservation_db_pass:
     external: true
   
-  sec_reservation_db_conn_str:
-    external: true
-  sec_contact_db_conn_str:
-    external: true
+  #sec_reservation_db_conn_str:
+  #  external: true
+  #sec_contact_db_conn_str:
+  #  external: true
