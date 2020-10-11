@@ -92,7 +92,7 @@ services:
         - node.role == worker
 
   s_reservation_service_api:
-    image: salihcantekin/contactapi
+    image: salihcantekin/reservationapi
     ports:
       - 91:1000
     networks:
