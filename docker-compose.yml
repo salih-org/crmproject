@@ -126,11 +126,11 @@ networks:
 
 secrets:
   sec_contact_db_pass:
-    file: /mnt/nfs_shares/docker_app_data/secret_files/contact_db_pasword.txt
+    external: true
   sec_reservation_db_pass:
-    file: /mnt/nfs_shares/docker_app_data/secret_files/reservation_db_pasword.txt
+    external: true
   
   sec_reservation_db_conn_str:
-    file: /mnt/nfs_shares/docker_app_data/secret_files/conn_str_reservation_db.txt
+    external: true
   sec_contact_db_conn_str:
-    file: /mnt/nfs_shares/docker_app_data/secret_files/conn_str_contact_db.txt
+    external: true
