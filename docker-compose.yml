@@ -133,4 +133,8 @@ secrets:
   sec_reservation_db_conn_str:
     file: /mnt/nfs_shares/docker_app_data/secret_files/conn_str_reservation_db.txt
   sec_contact_db_conn_str:
+<<<<<<< HEAD
     file: /mnt/nfs_shares/docker_app_data/secret_files/conn_str_contact_db.txt
+=======
+    file: /mnt/nfs_shares/docker_app_data/secret_files/conn_str_contact_db.txt
+>>>>>>> a59fd23ac23a20b97451d6fc0ff2c01bcf68469f
