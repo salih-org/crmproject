@@ -112,7 +112,7 @@ services:
       - s_crm_api_gateway
     build:
       context: .
-      dockerfile: Services/ReservationService/Crm.API.Reservation.Contact/Dockerfile
+      dockerfile: Services/ReservationService/Crm.API.Service.Reservation/Dockerfile
 
 
 networks:
