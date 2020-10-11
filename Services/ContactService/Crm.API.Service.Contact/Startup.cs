@@ -32,6 +32,7 @@ namespace Crm.API.Services.Contact
             services.AddControllers();
 
 
+            services.AddLogging();
 
             services.AddDbContext<CrmDbContext>(conf =>
             {
@@ -55,6 +56,7 @@ namespace Crm.API.Services.Contact
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
 
             app.UseAuthorization();
 
