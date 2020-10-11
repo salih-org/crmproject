@@ -53,7 +53,7 @@ namespace Crm.API.Services.Contact
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
