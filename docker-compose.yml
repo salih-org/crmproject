@@ -58,11 +58,11 @@ services:
      placement: 
       constraints: 
         - node.role == worker
-    #secrets:
-    #  - sec_contact_db_conn_str
+    secrets:
+      - sec_contact_db_conn_str
     environment:
       - ASPNET_ENVIRONMENT=Production
-    #  - ConnectionStrings__Postgresql=/run/secrets/sec_contact_db_conn_str
+      - ConnectionStrings__Postgresql=/run/secrets/sec_contact_db_conn_str
     depends_on:
       - s_contact_service_db
       - s_crm_api_gateway
@@ -108,11 +108,11 @@ services:
      placement: 
       constraints: 
         - node.role == worker
-    #secrets:
-    #  - sec_reservation_db_conn_str
+    secrets:
+      - sec_reservation_db_conn_str
     environment:
       - ASPNET_ENVIRONMENT=Production
-    #  - ConnectionStrings__Postgresql=/run/secrets/sec_reservation_db_conn_str
+      - ConnectionStrings__Postgresql=/run/secrets/sec_reservation_db_conn_str
     depends_on:
       - s_reservation_service_db
       - s_crm_api_gateway
@@ -130,7 +130,7 @@ secrets:
   sec_reservation_db_pass:
     file: /mnt/nfs_shares/docker_app_data/secret_files/reservation_db_pasword.txt
   
-  #sec_reservation_db_conn_str:
-  #  file: /mnt/nfs_shares/docker_app_data/secret_files/conn_str_reservation_db.txt
-  #sec_contact_db_conn_str:
-  #  file: /mnt/nfs_shares/docker_app_data/secret_files/conn_str_contact_db.txt
+  sec_reservation_db_conn_str:
+    file: /mnt/nfs_shares/docker_app_data/secret_files/conn_str_reservation_db.txt
+  sec_contact_db_conn_str:
+    file: /mnt/nfs_shares/docker_app_data/secret_files/conn_str_contact_db.txt
