@@ -19,14 +19,11 @@ namespace Crm.API.Service.Reservation
 {
     public class Startup
     {
-        private readonly ILogger<Startup> logger;
+        private ILogger<Startup> logger;
 
-        public Startup(IConfiguration configuration, ILogger<Startup> Logger)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            logger = Logger;
-
-            logger.LogWarning("ConnStr: " + Configuration.GetConnectionString("Postgresql"));
         }
 
         public IConfiguration Configuration { get; }
@@ -51,8 +48,12 @@ namespace Crm.API.Service.Reservation
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> Logger)
         {
+            logger = Logger;
+
+            logger.LogWarning("ConnStr: " + Configuration.GetConnectionString("Postgresql"));
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

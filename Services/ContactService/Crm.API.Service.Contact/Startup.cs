@@ -19,6 +19,8 @@ namespace Crm.API.Services.Contact
 {
     public class Startup
     {
+        private ILogger<Startup> logger;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -46,8 +48,12 @@ namespace Crm.API.Services.Contact
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> Logger)
         {
+            logger = Logger;
+
+            logger.LogWarning("ConnStr: " + Configuration.GetConnectionString("Postgresql"));
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
