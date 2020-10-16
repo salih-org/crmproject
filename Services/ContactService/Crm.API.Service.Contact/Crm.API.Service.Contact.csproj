@@ -8,7 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="7.0.4" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.0.4" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Crm.API.Service.Contact.Service\Crm.API.Service.Contact.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Crm\API\Service\" />
   </ItemGroup>
 
 

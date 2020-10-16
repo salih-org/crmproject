@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Crm.API.Service.Contact.Results;
 using Crm.API.Service.Contact.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,17 +20,31 @@ namespace Crm.API.Services.Contact.Controllers
             contactService = ContactService;
         }
 
+        [HttpPost]
+        public async Task<Result<Service.Contact.Data.Models.Contact>> Create()
+        {
+            return new Result<Service.Contact.Data.Models.Contact>()
+            {
+                Value = await contactService.GetFirstContact()
+            };
+        }
 
         [HttpGet()]
-        public Service.Contact.Data.Models.Contact Get()
+        public async Task<Result<Service.Contact.Data.Models.Contact>> Get()
         {
-            return contactService.GetFirstContact();
+            return new Result<Service.Contact.Data.Models.Contact>()
+            {
+                Value = await contactService.GetFirstContact()
+            };
         }
 
         [HttpGet("{id}")]
-        public Service.Contact.Data.Models.Contact Get(int id)
+        public async Task<Result<Service.Contact.Data.Models.Contact>> Get(int id)
         {
-            return contactService.GetContactById(id);
+            return new Result<Service.Contact.Data.Models.Contact>()
+            {
+                Value = await contactService.GetContactById(id)
+            };
         }
     }
 }

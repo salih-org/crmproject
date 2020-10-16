@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Crm.API.Service.Contact.Data.Context;
 using Crm.API.Service.Contact.Services.Interfaces;
 using Crm.API.Service.Contact.Services.Services;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+
 
 namespace Crm.API.Services.Contact
 {
@@ -31,6 +33,17 @@ namespace Crm.API.Services.Contact
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMassTransit(x =>
+            {
+                x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg => 
+                {
+                    cfg.UseHealthCheck(provider);
+                    cfg.Host("c_rabbitmq");
+                }));
+            });
+
+            services.AddMassTransitHostedService();
+
             services.AddControllers();
 
 
