@@ -6,6 +6,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Crm.API.Service.Reservation.Service\Crm.API.Service.Reservation.Service.csproj" />
+
+    <PackageReference Include="MassTransit" Version="7.0.4" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.0.4" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.0.4" />
+
   </ItemGroup>
 
 

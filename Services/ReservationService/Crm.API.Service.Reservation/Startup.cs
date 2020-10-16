@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Crm.API.Service.Common.EventBusConsumers;
 using Crm.API.Service.Reservation.Data.Context;
 using Crm.API.Service.Reservation.Service.Interfaces;
 using Crm.API.Service.Reservation.Service.Services;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +33,23 @@ namespace Crm.API.Service.Reservation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMassTransit(x =>
+            {
+                x.AddConsumer<EventContactConsumer>();
+
+                x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
+                {
+                    cfg.UseHealthCheck(provider);
+                    cfg.Host("rabbitmq://s_rabbitmq");
+
+                    cfg.ReceiveEndpoint("test_queue", ep => 
+                    {
+                        ep.PrefetchCount = 16;
+                        ep.ConfigureConsumer<EventContactConsumer>(provider);
+                    });
+                }));
+            });
+
             services.AddControllers();
 
 

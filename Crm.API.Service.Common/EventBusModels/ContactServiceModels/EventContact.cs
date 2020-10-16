@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Crm.API.Service.Common.EventBusModels.ContactServiceModels
 {
-    public class ContactCreatedEvent
+    public class EventContact
     {
-        public int ContactId { get; set; }
+        public String FullName { get; set; }
     }
 }
