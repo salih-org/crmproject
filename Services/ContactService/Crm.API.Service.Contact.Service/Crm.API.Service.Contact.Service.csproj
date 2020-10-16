@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Crm.API.Service.Common\Crm.API.Service.Common.csproj" />
     <ProjectReference Include="..\Crm.API.Service.Contact.Data\Crm.API.Service.Contact.Data.csproj" />
   </ItemGroup>
 
