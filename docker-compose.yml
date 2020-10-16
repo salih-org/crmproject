@@ -129,7 +129,7 @@ services:
     deploy:
       placement:
         constraints:
-          - node.role == manager
+          - node.role == worker
       replicas: 1
       restart_policy:
         condition: on-failure
