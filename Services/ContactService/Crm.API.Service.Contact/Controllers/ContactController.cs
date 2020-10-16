@@ -21,11 +21,11 @@ namespace Crm.API.Services.Contact.Controllers
         }
 
         [HttpPost]
-        public async Task<Result<Service.Contact.Data.Models.Contact>> Create()
+        public async Task<Result<Service.Contact.Data.Models.Contact>> Create(Service.Contact.Data.Models.Contact Contact)
         {
             return new Result<Service.Contact.Data.Models.Contact>()
             {
-                Value = await contactService.GetFirstContact()
+                Value = await contactService.CreateContact(Contact)
             };
         }
 
