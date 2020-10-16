@@ -38,7 +38,7 @@ namespace Crm.API.Services.Contact
                 x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg => 
                 {
                     cfg.UseHealthCheck(provider);
-                    cfg.Host("s_rabbitmq");
+                    cfg.Host("rabbitmq://s_rabbitmq");
                 }));
             });
 

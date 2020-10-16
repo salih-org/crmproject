@@ -43,10 +43,10 @@ namespace Crm.API.Service.Contact.Services.Services
 
             logger.LogInformation("Contact Created");
 
-            Uri u = new Uri("s_rabbitmq/test_queue");
+            Uri u = new Uri("rabbitmq://s_rabbitmq/test_queue");
 
             var endPoint = await bus.GetSendEndpoint(u);
-            await endPoint.Send(Contact.Id);
+            await endPoint.Send(Contact);
 
             logger.LogInformation("Event Send");
 
