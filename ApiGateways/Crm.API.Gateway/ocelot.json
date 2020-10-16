@@ -5,6 +5,8 @@
   "Routes": [
     {
       "UpstreamPathTemplate": "/contact/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+
       "DownstreamPathTemplate": "/api/contact/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
