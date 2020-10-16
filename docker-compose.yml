@@ -122,7 +122,7 @@ services:
     ports:
       - 9090:15672
     volumes:
-      - /opt/app_data/rabbitmq_data:/var/lib/rabbitmq
+      - /mnt/nfs_shares/docker_app_data/rabbitmq:/var/lib/rabbitmq
     networks:
     # - custom_net
      - net_crm
