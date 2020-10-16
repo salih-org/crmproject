@@ -7,6 +7,8 @@ services:
       - 80:1000
     networks:
       - net_crm
+    depends_on:
+      - s_rabbitmq
     deploy:
       placement:
         constraints:
@@ -112,6 +114,18 @@ services:
       context: .
       dockerfile: Services/ReservationService/Crm.API.Service.Reservation/Dockerfile
 
+
+
+  s_rabbitmq:
+    container_name: c_rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - 9090:15672
+    volumes:
+      - /opt/app_data/rabbitmq_data:/var/lib/rabbitmq
+    networks:
+     - custom_net
+     - net_crm
 
 networks:
   net_crm:
