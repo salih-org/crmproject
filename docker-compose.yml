@@ -124,7 +124,7 @@ services:
     volumes:
       - /opt/app_data/rabbitmq_data:/var/lib/rabbitmq
     networks:
-     - custom_net
+    # - custom_net
      - net_crm
     deploy:
       placement:
@@ -138,8 +138,8 @@ services:
 networks:
   net_crm:
 
-  custom_net:
-    external: true
+  #custom_net:
+  #  external: true
 
 #secrets:
   #sec_contact_db_pass:
