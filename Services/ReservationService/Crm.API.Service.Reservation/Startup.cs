@@ -45,6 +45,8 @@ namespace Crm.API.Service.Reservation
                 }));
             });
 
+            services.AddMassTransitHostedService();
+
             services.AddControllers();
 
 
