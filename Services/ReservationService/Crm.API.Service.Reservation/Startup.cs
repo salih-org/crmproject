@@ -1,21 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Crm.API.Service.Common.EventBusConsumers;
 using Crm.API.Service.Reservation.Data.Context;
+using Crm.API.Service.Reservation.EventBus;
 using Crm.API.Service.Reservation.Service.Interfaces;
 using Crm.API.Service.Reservation.Service.Services;
 using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Crm.API.Service.Reservation
 {
@@ -35,7 +30,7 @@ namespace Crm.API.Service.Reservation
         {
             services.AddMassTransit(x =>
             {
-                x.AddConsumer<EventContactConsumer>();
+                x.AddConsumer<ContactEventModelConsumer>();
 
                 x.AddBus(provider => Bus.Factory.CreateUsingRabbitMq(cfg =>
                 {
@@ -45,7 +40,7 @@ namespace Crm.API.Service.Reservation
                     cfg.ReceiveEndpoint("test_queue", ep => 
                     {
                         ep.PrefetchCount = 16;
-                        ep.ConfigureConsumer<EventContactConsumer>(provider);
+                        ep.ConfigureConsumer<ContactEventModelConsumer>(provider);
                     });
                 }));
             });

@@ -1,13 +1,10 @@
-﻿using Crm.API.Service.Common.EventBusModels.ContactServiceModels;
-using Crm.API.Service.Contact.Data.Context;
+﻿using Crm.API.Service.Contact.Data.Context;
+using Crm.API.Service.Contact.Service.EventBus;
 using Crm.API.Service.Contact.Services.Interfaces;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Crm.API.Service.Contact.Services.Services
@@ -47,7 +44,7 @@ namespace Crm.API.Service.Contact.Services.Services
             Uri u = new Uri("rabbitmq://s_rabbitmq/test_queue");
 
             var endPoint = await bus.GetSendEndpoint(u);
-            await endPoint.Send(new EventContact() { FullName = String.Concat(Contact.FirstName, " ", Contact.LastName) });
+            await endPoint.Send(new ContactEventModel() { FullName = String.Concat(Contact.FirstName, " ", Contact.LastName) });
 
             logger.LogInformation("Event Send");
 
