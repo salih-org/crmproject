@@ -126,9 +126,20 @@ services:
     networks:
      - custom_net
      - net_crm
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
 
 networks:
   net_crm:
+
+  custom_net:
+    external: true
 
 #secrets:
   #sec_contact_db_pass:
